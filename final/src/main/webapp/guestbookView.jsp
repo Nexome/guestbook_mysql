@@ -14,17 +14,19 @@
 
         function drawChart() {
 
-            var data = google.visualization.arrayToDataTable([
-                <c:forEach var="entry" varStatus="status" items="$(statistics)">
-                    <c:if test="${status.first}">
-                        ['Guestbook', '# of messages'],
-                    </c:if>
+            var data = google.visualization.arrayToDataTable(
+                [
+                    <c:forEach var="entry" varStatus="status" items="${statistics}">
+                        <c:if test="${status.first}">
+                            ['Guestbook', '# of messages'],
+                        </c:if>
                         ['${entry.key}', ${entry.value}]
-                    <c:if test="${not status.last}">
-                         ,
-                    </c:if>
-      </c:forEach>
-            ]);
+                        <c:if test="${not status.last}">
+                        ,
+                        </c:if>
+                    </c:forEach>
+                ]
+            );
 
             var options = {
                 title: 'Messages in guestbooks',
