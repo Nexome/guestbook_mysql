@@ -14,8 +14,8 @@
 		<appengine_project>isiscloud-161108</appengine_project>
 		<!-- A remplacer par la configuration de votre base de données -->		
 		<INSTANCE_CONNECTION_NAME>isiscloud-161108:europe-west1:guestbook</INSTANCE_CONNECTION_NAME>
-		<user>isis</user>
-		<password>Castres81</password>
+		<user>nexome</user>
+		<password>Lq89VQF5KBvh</password>
 		<database>guestbook</database>
 
 		<appengine.app.version>1</appengine.app.version>
