@@ -110,8 +110,8 @@ public class GuestBookDAO
         ResultSet resultSet = statement.executeQuery(sql);
         while (resultSet.next())
         {
-            String book = resultSet.getString(1);
-            Integer nb = resultSet.getInt(2);
+            String book = resultSet.getString("book");
+            Integer nb = resultSet.getInt("nb");
             resultat.put(book, nb);
         }
         return resultat;
